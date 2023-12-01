@@ -15,30 +15,35 @@ API para metodo CRUD para una identidad Usuario
 
 MONGODB_URI=mongodb://tu-base-de-datos
 SECRET=your_secret_key
-Endpoints
+```
+
+## Uso
+Inicia la aplicación: npm start
+Accede a la API en http://localhost:3001 
+
+## Endpoints
+
 Obtener todos los elementos
-URL: /api/tu-recurso
+URL: /user
 Método: GET
 Parámetros de consulta: Ninguno
 Respuesta exitosa: Código 200, JSON con la lista de elementos.
-Obtener un elemento por ID
-URL: /api/tu-recurso/:id
-Método: GET
-Parámetros de ruta: id (ID del elemento)
-Respuesta exitosa: Código 200, JSON con el elemento.
+
 Crear un nuevo elemento
-URL: /api/tu-recurso
+URL: /user
 Método: POST
 Cuerpo de la solicitud: JSON con los datos del nuevo elemento.
-Respuesta exitosa: Código 201, JSON con el nuevo elemento creado.
+Respuesta exitosa: Código 200, JSON con un mensaje de creado.
+
 Actualizar un elemento existente
-URL: /api/tu-recurso/:id
+URL: /user?id=id_de_usuario
 Método: PUT
-Parámetros de ruta: id (ID del elemento)
+Parámetros de ruta en tipo query: id (ID del elemento en BD)
 Cuerpo de la solicitud: JSON con los datos actualizados.
 Respuesta exitosa: Código 200, JSON con el elemento actualizado.
+
 Eliminar un elemento
-URL: /api/tu-recurso/:id
+URL: /user?id=id_de_usuario
 Método: DELETE
-Parámetros de ruta: id (ID del elemento)
-Respuesta exitosa: Código 204 (Sin contenido)
+Parámetros de ruta en tipo query: id (ID del elemento en BD)
+Respuesta exitosa: Código 200, JSON con un mensaje de eliminado.
